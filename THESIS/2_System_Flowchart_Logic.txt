@@ -1,0 +1,48 @@
+═══════════════════════════════════════════════════════════════════════════════
+                    SYSTEM FLOWCHART / LOGIC
+═══════════════════════════════════════════════════════════════════════════════
+
+The Contact Management System follows a simple and logical sequence to manage 
+data. Below is the step-by-step logic of how the application processes 
+information:
+
+1. START: The user launches the application.
+
+2. MAIN INTERFACE: The system displays the main form with fields for Name, 
+   Phone, and Email.
+
+3. INPUT DATA: The user enters the contact details in the respective text boxes.
+
+4. VALIDATION:
+   • If the fields are empty, the system shows an error message: "Please fill 
+     all fields before adding!"
+   • If the fields are filled, it proceeds to the next step.
+
+5. SAVE DATA: When the user clicks the "Add Contact" button, the data is 
+   transferred and displayed in the List View / List Box in the format: 
+   "Name | Phone | Email".
+
+6. CLEAR FIELDS: The text boxes are automatically cleared for the next entry.
+
+7. EXIT: The user can close the application at any time using the Exit button, 
+   which shows a confirmation dialog before closing.
+
+═══════════════════════════════════════════════════════════════════════════════
+Technical Logic (Behind the Scenes):
+═══════════════════════════════════════════════════════════════════════════════
+
+• Input Handling: Uses TextBox controls to capture user strings.
+
+• Data Storage: In this basic version, data is stored in a ListBox control 
+  during the runtime.
+
+• Event Handling: The logic is triggered by the Click event of the command 
+  buttons (Add Contact, Clear, Exit).
+
+• Validation: The system checks if all three fields (Name, Phone, Email) are 
+  filled before allowing data to be saved.
+
+• Data Formatting: Contact information is combined using the separator " | " 
+  to display as: "Name | Phone | Email".
+
+═══════════════════════════════════════════════════════════════════════════════

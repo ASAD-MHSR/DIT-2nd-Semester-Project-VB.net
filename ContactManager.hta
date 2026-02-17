@@ -1,0 +1,354 @@
+<html>
+<head>
+<title>Star Group - Contact Management System</title>
+<HTA:APPLICATION 
+     ID="ContactManager"
+     APPLICATIONNAME="Contact Manager"
+     BORDER="thin"
+     BORDERSTYLE="normal"
+     CAPTION="yes"
+     MAXIMIZEBUTTON="yes"
+     MINIMIZEBUTTON="yes"
+     SHOWINTASKBAR="yes"
+     SINGLEINSTANCE="yes"
+     SYSMENU="yes"
+     VERSION="1.0"
+     WINDOWSTATE="normal"
+     SCROLL="no"/>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', 'Microsoft Sans Serif', Tahoma, Arial;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        overflow: hidden;
+    }
+    .main-container {
+        width: 100%;
+        height: 100vh;
+        background: transparent;
+        position: relative;
+    }
+    .content-wrapper {
+        width: 750px;
+        margin: 0 auto;
+        padding: 30px;
+        box-sizing: border-box;
+        height: 100%;
+        display: table;
+    }
+    .content-cell {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .form-panel {
+        background: #FFFFFF;
+        border-radius: 10px;
+        padding: 35px;
+        margin-bottom: 25px;
+        box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+        border: 1px solid #E0E0E0;
+    }
+    .panel-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #333333;
+        margin-bottom: 25px;
+        padding-bottom: 12px;
+        border-bottom: 3px solid #667eea;
+    }
+    .form-row {
+        margin-bottom: 22px;
+    }
+    .form-row:last-child {
+        margin-bottom: 0;
+    }
+    .label {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        color: #555555;
+        margin-bottom: 8px;
+    }
+    .textbox {
+        width: 100%;
+        padding: 14px 16px;
+        border: 2px solid #DDDDDD;
+        border-radius: 6px;
+        font-size: 15px;
+        background-color: #FFFFFF;
+        box-sizing: border-box;
+        transition: all 0.3s;
+        height: 45px;
+    }
+    .textbox:focus {
+        border-color: #667eea;
+        outline: none;
+        box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+    }
+    .textbox:hover {
+        border-color: #999999;
+    }
+    .button-group {
+        margin-top: 30px;
+    }
+    .button-row {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        border-spacing: 12px 0;
+    }
+    .button-cell {
+        display: table-cell;
+    }
+    .button {
+        width: 100%;
+        padding: 16px;
+        border: none;
+        border-radius: 6px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.3s;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        height: 50px;
+    }
+    .button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    .button:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+    #btnAdd {
+        background: #000000;
+        color: white;
+        border: 2px solid #000000;
+    }
+    #btnAdd:hover {
+        background: #333333;
+        border-color: #333333;
+    }
+    #btnClear {
+        background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+        color: #333333;
+        border: 2px solid #808080;
+    }
+    #btnClear:hover {
+        background: linear-gradient(135deg, #e0a800 0%, #e68900 100%);
+        border-color: #666666;
+    }
+    #btnExit {
+        background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+        color: white;
+    }
+    #btnExit:hover {
+        background: linear-gradient(135deg, #c82333 0%, #bd2130 100%);
+    }
+    .list-panel {
+        background: #FFFFFF;
+        border-radius: 10px;
+        padding: 0;
+        box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+        border: 1px solid #E0E0E0;
+        overflow: hidden;
+    }
+    .list-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 15px 20px;
+        font-size: 18px;
+        font-weight: 600;
+        color: white;
+    }
+    .list-container {
+        border: none;
+        background-color: #FFFFFF;
+        height: 280px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 10px;
+    }
+    .list-item {
+        padding: 15px 18px;
+        border-bottom: 1px solid #F0F0F0;
+        color: #333333;
+        font-size: 14px;
+        transition: all 0.2s;
+        line-height: 1.6;
+    }
+    .list-item:hover {
+        background-color: #F8F9FA;
+        padding-left: 25px;
+    }
+    .list-item:last-child {
+        border-bottom: none;
+    }
+    .contact-badge {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: #667eea;
+        border-radius: 50%;
+        margin-right: 12px;
+        vertical-align: middle;
+    }
+    .contact-info {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .footer {
+        text-align: center;
+        margin-top: 25px;
+    }
+    .ok-button {
+        padding: 14px 40px;
+        border: none;
+        border-radius: 6px;
+        font-size: 15px;
+        font-weight: 600;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        height: 50px;
+        min-width: 120px;
+    }
+    .ok-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    .ok-button:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+    .empty-list {
+        padding: 80px 20px;
+        color: #999999;
+        font-size: 14px;
+        text-align: center;
+    }
+    .empty-icon {
+        font-size: 56px;
+        margin-bottom: 15px;
+        opacity: 0.5;
+    }
+</style>
+<script language="VBScript">
+    Sub Window_OnLoad
+        document.getElementById("txtName").Focus
+    End Sub
+    
+    Sub btnAdd_OnClick
+        Dim name, phone, email
+        name = Trim(document.getElementById("txtName").value)
+        phone = Trim(document.getElementById("txtPhone").value)
+        email = Trim(document.getElementById("txtEmail").value)
+        
+        If name = "" Or phone = "" Or email = "" Then
+            MsgBox "Please fill all fields before adding!", vbExclamation, "Input Error"
+        Else
+            AddContactToList name, phone, email
+            MsgBox "Contact Saved Successfully!", vbInformation, "Success"
+            btnClear_OnClick
+        End If
+    End Sub
+    
+    Sub AddContactToList(contactName, contactPhone, contactEmail)
+        Dim listDiv, newItem, emptyMsg, contactInfo
+        
+        Set listDiv = document.getElementById("listContainer")
+        
+        On Error Resume Next
+        Set emptyMsg = document.getElementById("emptyMessage")
+        If Not emptyMsg Is Nothing Then
+            listDiv.removeChild emptyMsg
+        End If
+        On Error Goto 0
+        
+        contactInfo = contactName & " | " & contactPhone & " | " & contactEmail
+        
+        Set newItem = document.createElement("div")
+        newItem.className = "list-item"
+        newItem.innerHTML = "<span class='contact-badge'></span><span class='contact-info'>" & contactInfo & "</span>"
+        listDiv.appendChild newItem
+    End Sub
+    
+    Sub btnClear_OnClick
+        document.getElementById("txtName").value = ""
+        document.getElementById("txtPhone").value = ""
+        document.getElementById("txtEmail").value = ""
+        document.getElementById("txtName").Focus
+    End Sub
+    
+    Sub btnExit_OnClick
+        Dim result
+        result = MsgBox("Are you sure you want to exit?", vbYesNo + vbQuestion, "Exit System")
+        If result = vbYes Then
+            window.Close
+        End If
+    End Sub
+    
+    Sub btnOK_OnClick
+        window.Close
+    End Sub
+</script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="content-wrapper">
+            <div class="content-cell">
+                <div class="form-panel">
+                    <div class="panel-title">Add New Contact</div>
+                    
+                    <div class="form-row">
+                        <span class="label">Name:</span>
+                        <input type="text" id="txtName" class="textbox" placeholder="Enter full name" />
+                    </div>
+                    
+                    <div class="form-row">
+                        <span class="label">Phone Number:</span>
+                        <input type="text" id="txtPhone" class="textbox" placeholder="Enter phone number" />
+                    </div>
+                    
+                    <div class="form-row">
+                        <span class="label">Email:</span>
+                        <input type="text" id="txtEmail" class="textbox" placeholder="Enter email address" />
+                    </div>
+                    
+                    <div class="button-group">
+                        <div class="button-row">
+                            <div class="button-cell">
+                                <button id="btnAdd" class="button" onclick="btnAdd_OnClick">Add Contact</button>
+                            </div>
+                            <div class="button-cell">
+                                <button id="btnClear" class="button" onclick="btnClear_OnClick">Clear</button>
+                            </div>
+                            <div class="button-cell">
+                                <button id="btnExit" class="button" onclick="btnExit_OnClick">Exit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="list-panel">
+                    <div class="list-header">Contacts List</div>
+                    <div id="listContainer" class="list-container">
+                        <div id="emptyMessage" class="empty-list">
+                            <div class="empty-icon">📇</div>
+                            <div>No contacts added yet.</div>
+                            <div style="font-size: 12px; margin-top: 8px; color: #BBBBBB;">Add contacts using the form above</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer">
+                    <button class="ok-button" onclick="btnOK_OnClick">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

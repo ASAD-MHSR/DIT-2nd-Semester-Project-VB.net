@@ -1,0 +1,51 @@
+═══════════════════════════════════════════════════════════════════════════════
+                    HARDWARE & SOFTWARE REQUIREMENTS
+═══════════════════════════════════════════════════════════════════════════════
+
+═══════════════════════════════════════════════════════════════════════════════
+HARDWARE REQUIREMENTS
+═══════════════════════════════════════════════════════════════════════════════
+
+Minimum Requirements:
+• Processor: Intel Pentium 4 or equivalent, 1.0 GHz or higher
+• Memory (RAM): 512 MB minimum, 1 GB recommended
+• Hard Disk Space: 50 MB free space for application
+• Display: 800 x 600 pixels minimum screen resolution
+• Input Devices: Standard keyboard and mouse
+
+Recommended Requirements:
+• Processor: Intel Core i3 or equivalent, 2.0 GHz or higher
+• Memory (RAM): 2 GB or higher for better performance
+• Hard Disk Space: 500 MB free space
+• Display: 1024 x 768 pixels or higher screen resolution
+• Input Devices: Standard keyboard and mouse
+
+═══════════════════════════════════════════════════════════════════════════════
+SOFTWARE REQUIREMENTS
+═══════════════════════════════════════════════════════════════════════════════
+
+Operating System:
+• Windows 7 (Service Pack 1 or later)
+• Windows 8 / 8.1
+• Windows 10 (all versions)
+• Windows 11
+• 32-bit (x86) or 64-bit (x64) architecture
+
+.NET Framework:
+• .NET Framework 4.5 or later
+• OR .NET 6.0 or later
+• Usually pre-installed on Windows 10/11
+• Can be downloaded from Microsoft website if needed
+
+Development Environment (For Source Code Modification):
+• Visual Studio 2019 or later (Community/Professional/Enterprise)
+• Visual Studio 2022 (recommended)
+• .NET desktop development workload
+• Windows Forms development tools
+
+Runtime Requirements (For End Users):
+• Windows Operating System (as specified above)
+• .NET Framework Runtime (4.5 or later)
+• No additional software required to run the application
+
+═══════════════════════════════════════════════════════════════════════════════

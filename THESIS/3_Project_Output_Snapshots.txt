@@ -1,0 +1,82 @@
+═══════════════════════════════════════════════════════════════════════════════
+                    PROJECT OUTPUT / SNAPSHOTS
+═══════════════════════════════════════════════════════════════════════════════
+
+This section showcases the graphical user interface (GUI) of the Contact Management 
+System. The snapshots below illustrate the different states of the application 
+during its execution.
+
+═══════════════════════════════════════════════════════════════════════════════
+1. Main User Interface (Startup)
+═══════════════════════════════════════════════════════════════════════════════
+
+When the application is launched, the following screen appears. It provides a 
+clean and user-friendly layout for entering contact information.
+
+Description: The main form contains three text boxes for user input (Name, Phone 
+Number, Email) and a list box to display the stored contacts. Three action 
+buttons are available: Add Contact (Black), Clear (Orange), and Exit (Red). A 
+status bar at the bottom shows "System Ready" when the application starts.
+
+[INSERT SCREENSHOT 1: Initial Application Screen]
+
+═══════════════════════════════════════════════════════════════════════════════
+2. Data Entry and Validation
+═══════════════════════════════════════════════════════════════════════════════
+
+When a user enters the details and clicks the "Add Contact" button, the system 
+validates the input. If the fields are filled correctly, the data is moved to 
+the list.
+
+Description: This snapshot shows the data entry process. If any field is left 
+blank, a message box prompts the user with the error message "Please fill all 
+fields before adding!" and the status bar updates to show "Error: Please fill 
+all fields". When all fields are properly filled, clicking "Add Contact" shows 
+a success message "Contact Saved Successfully!" and the contact appears in the 
+list box.
+
+[INSERT SCREENSHOT 2: Adding Contact with Validation]
+
+═══════════════════════════════════════════════════════════════════════════════
+3. Listing and Managing Contacts
+═══════════════════════════════════════════════════════════════════════════════
+
+All the saved contacts are displayed in the list area below the input fields. 
+This allows the user to see all their contacts at a glance.
+
+Description: This shows the final output where multiple contacts have been 
+added and are organized in the list for easy viewing. Each contact is displayed 
+in the format "Name | Phone | Email" (e.g., "Ali | 1234567890 | ali@email.com"). 
+The list box is scrollable if there are many contacts. The status bar shows 
+"Contact added successfully!" after each addition.
+
+[INSERT SCREENSHOT 3: Multiple Contacts in List]
+
+═══════════════════════════════════════════════════════════════════════════════
+4. Clear Functionality
+═══════════════════════════════════════════════════════════════════════════════
+
+When the user clicks the "Clear" button, all input fields are cleared and the 
+cursor automatically moves to the Name field for the next entry.
+
+Description: This demonstrates the clear functionality where all three text boxes 
+(Name, Phone, Email) become empty, allowing the user to enter a new contact 
+without manually clearing each field. The status bar resets to "System Ready".
+
+[INSERT SCREENSHOT 4: Clear Function]
+
+═══════════════════════════════════════════════════════════════════════════════
+5. Exit Confirmation
+═══════════════════════════════════════════════════════════════════════════════
+
+When the user clicks the Exit button, the application shows a confirmation 
+dialog before closing safely.
+
+Description: A confirmation message box appears asking "Are you sure you want 
+to exit?" with Yes/No options. This prevents accidental closure of the 
+application. If the user clicks "Yes", the application closes. If "No" is 
+selected, the user returns to the application.
+
+[INSERT SCREENSHOT 5: Exit Confirmation Dialog]
+
+═══════════════════════════════════════════════════════════════════════════════

@@ -1,0 +1,22 @@
+═══════════════════════════════════════════════════════════════════════════════
+                    ABOUT SOFTWARE - CONTACT MANAGER
+═══════════════════════════════════════════════════════════════════════════════
+
+A Contact Management System is a computer program specifically designed to store, 
+manage, and retrieve contact information such as names, phone numbers, and email 
+addresses. It provides a digital version of a physical address book, allowing 
+users to keep track of their personal and professional connections in an organized 
+way.
+
+This software is highly useful for individuals and small businesses to maintain 
+a clean database of communication details. It allows users to quickly add new 
+entries, search for existing contacts, and ensure that important information is 
+never lost. By using a structured interface, it simplifies the process of data 
+entry and management, making it much more efficient than writing details on paper.
+
+Modern contact managers often include features like search filters, easy editing 
+of existing records, and the ability to list all saved contacts at once. These 
+features make communication faster and help users stay organized in their daily 
+lives.
+
+═══════════════════════════════════════════════════════════════════════════════

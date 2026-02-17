@@ -1,0 +1,62 @@
+═══════════════════════════════════════════════════════════════
+        STAR GROUP - CONTACT MANAGER - READY TO USE!
+═══════════════════════════════════════════════════════════════
+
+✅ COMPLETE CONTACT MANAGER APPLICATION IS READY!
+
+📁 MAIN FILE TO RUN (DIRECT RUN - NO COMPILATION NEEDED):
+   → Double-click: ContactManager.hta
+   
+   This file runs DIRECTLY like an EXE - no installation needed!
+   Just double-click and it will start automatically.
+
+═══════════════════════════════════════════════════════════════
+
+🎯 FEATURES:
+   ✓ Add contacts with Name, Phone, and Email
+   ✓ View all contacts in a list
+   ✓ Clear form fields with one click
+   ✓ Validation - ensures all fields are filled
+   ✓ Success messages when contact is saved
+   ✓ Exit confirmation dialog
+   ✓ Modern, beautiful interface
+   ✓ Auto-runs when opened
+   ✓ No installation required
+
+═══════════════════════════════════════════════════════════════
+
+📋 HOW TO USE:
+
+1. Double-click "ContactManager.hta"
+2. Enter Name, Phone, and Email in the fields
+3. Click "Add Contact" to save
+4. View all contacts in the list below
+5. Click "Clear" to clear the form
+6. Click "Exit" to close the application
+
+═══════════════════════════════════════════════════════════════
+
+📝 FILES INCLUDED:
+
+• ContactManager.hta          → Main application (RUN THIS!)
+• ContactManager.bat           → Alternative launcher
+• Form1.vb                      → VB.NET source code (your code)
+• Form1.Designer.vb             → Form design code
+• Program.vb                    → Application entry point
+• ContactManager.vbproj         → Project file
+• ContactManager.sln            → Solution file
+• Build.bat                     → Build script for EXE
+
+═══════════════════════════════════════════════════════════════
+
+💡 NOTE:
+   The .hta file uses VBScript (Visual Basic Script) and runs 
+   directly on Windows without any compilation needed.
+   It behaves exactly like an EXE file!
+   
+   If you want to build a proper EXE file, use Build.bat
+   (requires .NET SDK to be installed)
+
+═══════════════════════════════════════════════════════════════
+
+Enjoy your Contact Manager! 📞
